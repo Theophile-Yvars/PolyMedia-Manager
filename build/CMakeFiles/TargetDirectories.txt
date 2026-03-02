@@ -1,0 +1,4 @@
+/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles/polymediamanager.dir
+/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles/PolyMediaMain.dir
+/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles/rebuild_cache.dir

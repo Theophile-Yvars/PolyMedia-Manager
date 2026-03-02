@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpolymediamanager.a CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o
+/usr/bin/ranlib libpolymediamanager.a

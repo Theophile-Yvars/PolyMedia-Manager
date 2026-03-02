@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/PolyMediaMain.dir/src/main.cpp.o -o PolyMediaMain  libpolymediamanager.a 
