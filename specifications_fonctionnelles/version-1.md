@@ -40,20 +40,3 @@ Règle DVD : 1.50€ par jour de retard.
 
 [F-08] Exportation : Le système doit pouvoir générer un récapitulatif textuel du catalogue.
 
-## 3. Contraintes Techniques (Architecture)
-Le respect de ces contraintes est éliminatoire pour la validation du projet.
-
-Extensibilité (OCP) : L'ajout d'un type "Disque Vinyle" ne doit nécessiter aucune modification de la classe de gestion Library.
-
-Modularité des Interfaces (ISP) : Un média non-empruntable ne doit pas posséder de méthodes checkOut() ou checkIn().
-
-Abstraction du Stockage (DIP) : La logique métier ne doit pas dépendre directement de la console ou d'un fichier. On utilisera une interface d'abstraction pour l'affichage et la sauvegarde.
-
-Gestion Mémoire (Modern C++) : Utilisation obligatoire des Smart Pointers (std::unique_ptr ou std::shared_ptr) pour éviter toute fuite mémoire.
-
-## 4. Critères d'Acceptation
-Le programme compile sans warnings avec les flags -Wall -Wextra.
-
-Aucune fuite mémoire détectée (Valgrind ou Sanitizers).
-
-Un nouveau média peut être ajouté en créant une seule classe supplémentaire.
