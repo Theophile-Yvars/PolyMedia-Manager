@@ -4,7 +4,10 @@
             "name": "linux-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include/entities",
+                "${workspaceFolder}/include/interfaces",
+                "${workspaceFolder}/include/core"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "${default}",

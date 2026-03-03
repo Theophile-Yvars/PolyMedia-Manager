@@ -6,7 +6,9 @@ enable_testing()
 
 # Exécutable de test
 add_executable(runTests
-
+    test_book.cpp
+    test_dvd.cpp
+    test_magazine.cpp
 )
 
 # Inclure les headers du projet

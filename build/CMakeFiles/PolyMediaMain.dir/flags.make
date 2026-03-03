@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS =  -O0 -g --coverage -std=gnu++17
 

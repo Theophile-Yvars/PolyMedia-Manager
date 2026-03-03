@@ -151,8 +151,7 @@ CMakeFiles/PolyMediaMain.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/CatalogManagement.hpp \
- /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/IMedia.hpp \
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/core/CatalogControleur.hpp \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
@@ -174,4 +173,7 @@ CMakeFiles/PolyMediaMain.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h
+ /usr/include/c++/13/pstl/execution_defs.h \
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/interfaces/IMedia.hpp \
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/entities/Genre.hpp \
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/core/CatalogManagement.hpp

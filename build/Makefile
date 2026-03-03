@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build//CMakeFiles/progress.marks
@@ -142,29 +187,190 @@ PolyMediaMain/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PolyMediaMain.dir/build.make CMakeFiles/PolyMediaMain.dir/build
 .PHONY : PolyMediaMain/fast
 
-src/CatalogManagement.o: src/CatalogManagement.cpp.o
-.PHONY : src/CatalogManagement.o
+#=============================================================================
+# Target rules for targets named runTests
+
+# Build rule for target.
+runTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runTests
+.PHONY : runTests
+
+# fast build rule for target.
+runTests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/runTests.dir/build.make tests/CMakeFiles/runTests.dir/build
+.PHONY : runTests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f tests/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+src/core/CatalogControleur.o: src/core/CatalogControleur.cpp.o
+.PHONY : src/core/CatalogControleur.o
 
 # target to build an object file
-src/CatalogManagement.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o
-.PHONY : src/CatalogManagement.cpp.o
+src/core/CatalogControleur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o
+.PHONY : src/core/CatalogControleur.cpp.o
 
-src/CatalogManagement.i: src/CatalogManagement.cpp.i
-.PHONY : src/CatalogManagement.i
+src/core/CatalogControleur.i: src/core/CatalogControleur.cpp.i
+.PHONY : src/core/CatalogControleur.i
 
 # target to preprocess a source file
-src/CatalogManagement.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.i
-.PHONY : src/CatalogManagement.cpp.i
+src/core/CatalogControleur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.i
+.PHONY : src/core/CatalogControleur.cpp.i
 
-src/CatalogManagement.s: src/CatalogManagement.cpp.s
-.PHONY : src/CatalogManagement.s
+src/core/CatalogControleur.s: src/core/CatalogControleur.cpp.s
+.PHONY : src/core/CatalogControleur.s
 
 # target to generate assembly for a file
-src/CatalogManagement.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.s
-.PHONY : src/CatalogManagement.cpp.s
+src/core/CatalogControleur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.s
+.PHONY : src/core/CatalogControleur.cpp.s
+
+src/core/CatalogManagement.o: src/core/CatalogManagement.cpp.o
+.PHONY : src/core/CatalogManagement.o
+
+# target to build an object file
+src/core/CatalogManagement.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o
+.PHONY : src/core/CatalogManagement.cpp.o
+
+src/core/CatalogManagement.i: src/core/CatalogManagement.cpp.i
+.PHONY : src/core/CatalogManagement.i
+
+# target to preprocess a source file
+src/core/CatalogManagement.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.i
+.PHONY : src/core/CatalogManagement.cpp.i
+
+src/core/CatalogManagement.s: src/core/CatalogManagement.cpp.s
+.PHONY : src/core/CatalogManagement.s
+
+# target to generate assembly for a file
+src/core/CatalogManagement.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.s
+.PHONY : src/core/CatalogManagement.cpp.s
+
+src/entities/Book.o: src/entities/Book.cpp.o
+.PHONY : src/entities/Book.o
+
+# target to build an object file
+src/entities/Book.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o
+.PHONY : src/entities/Book.cpp.o
+
+src/entities/Book.i: src/entities/Book.cpp.i
+.PHONY : src/entities/Book.i
+
+# target to preprocess a source file
+src/entities/Book.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.i
+.PHONY : src/entities/Book.cpp.i
+
+src/entities/Book.s: src/entities/Book.cpp.s
+.PHONY : src/entities/Book.s
+
+# target to generate assembly for a file
+src/entities/Book.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.s
+.PHONY : src/entities/Book.cpp.s
+
+src/entities/Dvd.o: src/entities/Dvd.cpp.o
+.PHONY : src/entities/Dvd.o
+
+# target to build an object file
+src/entities/Dvd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o
+.PHONY : src/entities/Dvd.cpp.o
+
+src/entities/Dvd.i: src/entities/Dvd.cpp.i
+.PHONY : src/entities/Dvd.i
+
+# target to preprocess a source file
+src/entities/Dvd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.i
+.PHONY : src/entities/Dvd.cpp.i
+
+src/entities/Dvd.s: src/entities/Dvd.cpp.s
+.PHONY : src/entities/Dvd.s
+
+# target to generate assembly for a file
+src/entities/Dvd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.s
+.PHONY : src/entities/Dvd.cpp.s
+
+src/entities/Magazines.o: src/entities/Magazines.cpp.o
+.PHONY : src/entities/Magazines.o
+
+# target to build an object file
+src/entities/Magazines.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o
+.PHONY : src/entities/Magazines.cpp.o
+
+src/entities/Magazines.i: src/entities/Magazines.cpp.i
+.PHONY : src/entities/Magazines.i
+
+# target to preprocess a source file
+src/entities/Magazines.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.i
+.PHONY : src/entities/Magazines.cpp.i
+
+src/entities/Magazines.s: src/entities/Magazines.cpp.s
+.PHONY : src/entities/Magazines.s
+
+# target to generate assembly for a file
+src/entities/Magazines.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polymediamanager.dir/build.make CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.s
+.PHONY : src/entities/Magazines.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -197,12 +403,33 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... PolyMediaMain"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... polymediamanager"
-	@echo "... src/CatalogManagement.o"
-	@echo "... src/CatalogManagement.i"
-	@echo "... src/CatalogManagement.s"
+	@echo "... runTests"
+	@echo "... src/core/CatalogControleur.o"
+	@echo "... src/core/CatalogControleur.i"
+	@echo "... src/core/CatalogControleur.s"
+	@echo "... src/core/CatalogManagement.o"
+	@echo "... src/core/CatalogManagement.i"
+	@echo "... src/core/CatalogManagement.s"
+	@echo "... src/entities/Book.o"
+	@echo "... src/entities/Book.i"
+	@echo "... src/entities/Book.s"
+	@echo "... src/entities/Dvd.o"
+	@echo "... src/entities/Dvd.i"
+	@echo "... src/entities/Dvd.s"
+	@echo "... src/entities/Magazines.o"
+	@echo "... src/entities/Magazines.i"
+	@echo "... src/entities/Magazines.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

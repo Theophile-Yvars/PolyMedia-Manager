@@ -69,31 +69,95 @@ include CMakeFiles/polymediamanager.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/polymediamanager.dir/flags.make
 
-CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
-CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/CatalogManagement.cpp
-CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o -MF CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/CatalogManagement.cpp
+CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
+CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogManagement.cpp
+CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o -MF CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogManagement.cpp
 
-CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/CatalogManagement.cpp > CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.i
+CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogManagement.cpp > CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.i
 
-CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/CatalogManagement.cpp -o CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.s
+CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogManagement.cpp -o CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.s
+
+CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
+CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogControleur.cpp
+CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o -MF CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogControleur.cpp
+
+CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogControleur.cpp > CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.i
+
+CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/core/CatalogControleur.cpp -o CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.s
+
+CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
+CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Book.cpp
+CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o -MF CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Book.cpp
+
+CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Book.cpp > CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.i
+
+CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Book.cpp -o CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.s
+
+CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
+CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Dvd.cpp
+CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o -MF CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Dvd.cpp
+
+CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Dvd.cpp > CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.i
+
+CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Dvd.cpp -o CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.s
+
+CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o: CMakeFiles/polymediamanager.dir/flags.make
+CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o: /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Magazines.cpp
+CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o: CMakeFiles/polymediamanager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o -MF CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o.d -o CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o -c /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Magazines.cpp
+
+CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Magazines.cpp > CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.i
+
+CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/entities/Magazines.cpp -o CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.s
 
 # Object files for target polymediamanager
 polymediamanager_OBJECTS = \
-"CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o"
+"CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o" \
+"CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o" \
+"CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o" \
+"CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o" \
+"CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o"
 
 # External object files for target polymediamanager
 polymediamanager_EXTERNAL_OBJECTS =
 
-libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/CatalogManagement.cpp.o
+libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o
+libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o
+libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o
+libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o
+libpolymediamanager.a: CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o
 libpolymediamanager.a: CMakeFiles/polymediamanager.dir/build.make
 libpolymediamanager.a: CMakeFiles/polymediamanager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libpolymediamanager.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libpolymediamanager.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/polymediamanager.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/polymediamanager.dir/link.txt --verbose=$(VERBOSE)
 

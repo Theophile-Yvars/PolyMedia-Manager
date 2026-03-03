@@ -3,8 +3,10 @@
 
 CMakeFiles/PolyMediaMain.dir/src/main.cpp.o
  /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/src/main.cpp
- /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/CatalogManagement.hpp
- /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/IMedia.hpp
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/core/CatalogControleur.hpp
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/core/CatalogManagement.hpp
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/entities/Genre.hpp
+ /mnt/c/Users/theoy/Documents/Projets/c++/PolyMedia-Manager/include/interfaces/IMedia.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h

@@ -14,13 +14,17 @@ endif()
 
 # Code principal
 add_library(polymediamanager
-    src/CatalogManagement.cpp
+    src/core/CatalogManagement.cpp
+    src/core/CatalogControleur.cpp
+    src/entities/Book.cpp
+    src/entities/Dvd.cpp
+    src/entities/Magazines.cpp
 )
 
 target_include_directories(polymediamanager PUBLIC include)
 
 # Tests
-#add_subdirectory(tests)
+add_subdirectory(tests)
 
 # Exécutable principal de l’application
 add_executable(PolyMediaMain src/main.cpp)
