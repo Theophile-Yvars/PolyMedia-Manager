@@ -15,30 +15,28 @@ CatalogManagement::~CatalogManagement() {
     // Destructeur
 }
 
-void CatalogManagement::addMedia(IMedia* media) {
-    cout << "Adding media: " << media->getTitle() << endl;
-    mediaList.emplace_back(media);
+void CatalogManagement::addMedia(unique_ptr<IMedia> media) {
+    _mediaList.emplace_back(std::move(media));
 }
 
 void CatalogManagement::removeMedia(IMedia* media) {
-    for (auto it = mediaList.begin(); it != mediaList.end(); ++it) {
+    for (auto it = _mediaList.begin(); it != _mediaList.end(); ++it) {
         if (it->get() == media) {
-            mediaList.erase(it);
+            _mediaList.erase(it);
             break;
         }
     }
 }
 
 std::vector<IMedia*> CatalogManagement::listMedia() const {
-    std::vector<IMedia*> result;
-    result.reserve(mediaList.size());
-
-    for (const auto& media : mediaList) {
-        result.push_back(media.get());
+    vector<IMedia*> mediaPointers;
+    mediaPointers.reserve(_mediaList.size());
+    for (const auto& media : _mediaList) {
+        mediaPointers.push_back(media.get());
     }
-    
-    return result;
+    return mediaPointers;
 }
+
 
 bool CatalogManagement::borrowMedia(IMedia* media) {
     IBorrowable* borrowable = dynamic_cast<IBorrowable*>(media);
@@ -46,7 +44,6 @@ bool CatalogManagement::borrowMedia(IMedia* media) {
     if (!borrowable) {
         throw std::runtime_error("Media is not borrowable: " + media->getTitle());
     }
-
     try {
         borrowable->borrow();
         return true;

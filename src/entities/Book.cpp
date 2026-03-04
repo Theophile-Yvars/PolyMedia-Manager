@@ -1,5 +1,6 @@
 #include "entities/Book.hpp"
 #include <stdexcept>
+#include <chrono>
 
 Book::Book(const std::string& title, Genre genre, float price)
     : _title(title), _genre(genre), _price(price), _isBorrowed(false) {}
@@ -19,6 +20,7 @@ float Book::getPrice() const {
 void Book::borrow() {
     if(!_isBorrowed) {
         _isBorrowed = true;
+        _borrowDate = std::chrono::system_clock::now();
     } else {
         throw std::runtime_error("Book is already borrowed.");
     }
@@ -27,6 +29,7 @@ void Book::borrow() {
 void Book::returnItem() {
     if(_isBorrowed) {
         _isBorrowed = false;
+        _borrowDate = std::chrono::system_clock::time_point(); // Reset borrow date
     } else {
         throw std::runtime_error("Book is not borrowed.");
     }

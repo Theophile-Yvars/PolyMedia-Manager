@@ -1,5 +1,6 @@
 #include "entities/Dvd.hpp"
 #include <stdexcept>
+#include <chrono>
 
 Dvd::Dvd(const std::string& title, Genre genre, float price)
     : _title(title), _genre(genre), _price(price), _isBorrowed(false) {}
@@ -19,6 +20,7 @@ float Dvd::getPrice() const {
 void Dvd::borrow() {
     if(!_isBorrowed) {
         _isBorrowed = true;
+        _borrowDate = std::chrono::system_clock::now();
     } else {
         throw std::runtime_error("DVD is already borrowed.");
     }
@@ -27,6 +29,7 @@ void Dvd::borrow() {
 void Dvd::returnItem() {
     if(_isBorrowed) {
         _isBorrowed = false;
+        _borrowDate = std::chrono::system_clock::time_point(); // Reset borrow date
     } else {
         throw std::runtime_error("DVD is not borrowed.");
     }

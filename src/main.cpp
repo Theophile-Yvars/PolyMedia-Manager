@@ -9,10 +9,11 @@ int main (int argc, char *argv[]) {
 
     bool running = true;
     CatalogControleur catalogControleur;
+    catalogControleur.initMedia(); // Initialisation du catalogue avec des médias de test
 
     while (running)
     {
-        cout << "Enter a command (add, remove, list, exit): ";
+        cout << "Enter a command (add, remove, list, exit, borrow, return): ";
         string command;
         cin >> command;
 
@@ -25,7 +26,14 @@ int main (int argc, char *argv[]) {
         } else if (command == "list") {
             cout << "Listing media..." << endl;
             catalogControleur.listMedia();
-        } else if (command == "exit") {
+        } else if (command == "borrow") {
+            cout << "Borrowing media..." << endl;
+            catalogControleur.borrowMedia(); 
+        } else if (command == "return") {
+            cout << "Returning media..." << endl;   
+            catalogControleur.returnMedia(); 
+        }
+        else if (command == "exit") {
             running = false;
             cout << "Exiting PolyMedia-Manager. Goodbye!" << endl;
         } else {
