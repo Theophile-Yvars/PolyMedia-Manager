@@ -1,2 +1,0 @@
-/usr/bin/ar qc libpolymediamanager.a CMakeFiles/polymediamanager.dir/src/core/CatalogManagement.cpp.o CMakeFiles/polymediamanager.dir/src/core/CatalogControleur.cpp.o CMakeFiles/polymediamanager.dir/src/entities/Book.cpp.o CMakeFiles/polymediamanager.dir/src/entities/Dvd.cpp.o CMakeFiles/polymediamanager.dir/src/entities/Magazines.cpp.o
-/usr/bin/ranlib libpolymediamanager.a

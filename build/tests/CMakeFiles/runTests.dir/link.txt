@@ -1,1 +1,0 @@
-/usr/bin/c++  -O0 -g --coverage  --coverage CMakeFiles/runTests.dir/test_book.cpp.o CMakeFiles/runTests.dir/test_dvd.cpp.o CMakeFiles/runTests.dir/test_magazine.cpp.o -o runTests  ../libpolymediamanager.a ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a 
