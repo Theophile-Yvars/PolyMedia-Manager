@@ -11,6 +11,8 @@ public:
     bool addMedia();
     bool removeMedia();
     void listMedia();
+    bool borrowMedia(IMedia* media);
+    bool returnMedia(IMedia* media);
 private:
-    CatalogManagement catalogManagement;
+    CatalogManagement _catalogManagement;
 };

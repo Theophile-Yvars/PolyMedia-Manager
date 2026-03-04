@@ -42,7 +42,7 @@ bool CatalogControleur::addMedia() {
         cin >> price;
 
         Book* newBook = new Book(title, genre, price);
-        catalogManagement.addMedia(newBook);
+        _catalogManagement.addMedia(newBook);
     } else if (mediaType == "dvd") {
         string title;
         Genre genre;
@@ -58,7 +58,7 @@ bool CatalogControleur::addMedia() {
         cin >> price;
 
         Dvd* newDvd = new Dvd(title, genre, price);
-        catalogManagement.addMedia(newDvd);
+        _catalogManagement.addMedia(newDvd);
     } else if (mediaType == "magazine") {
         string title;
         Genre genre;
@@ -74,7 +74,7 @@ bool CatalogControleur::addMedia() {
         cin >> price;
 
         Magazines* newMagazine = new Magazines(title, genre, price);
-        catalogManagement.addMedia(newMagazine);
+        _catalogManagement.addMedia(newMagazine);
     } else {
         cout << "Type de média inconnu. Veuillez réessayer." << endl;
         return false;
@@ -84,7 +84,7 @@ bool CatalogControleur::addMedia() {
 }
 
 bool CatalogControleur::removeMedia() {
-    std::vector<IMedia*>  mediaList = catalogManagement.listMedia();
+    std::vector<IMedia*>  mediaList = _catalogManagement.listMedia();
     if (mediaList.empty()) {
         cout << "Aucun média à supprimer." << endl;
         return false;
@@ -103,7 +103,7 @@ bool CatalogControleur::removeMedia() {
 
     for (const auto& media : mediaList) {
         if (media->getTitle() == title) {
-            catalogManagement.removeMedia(media);
+            _catalogManagement.removeMedia(media);
             cout << "Média supprimé: " << title << endl;    
             return true;
         }
@@ -114,7 +114,7 @@ bool CatalogControleur::removeMedia() {
 }
 
 void CatalogControleur::listMedia() {
-    auto mediaList = catalogManagement.listMedia();
+    auto mediaList = _catalogManagement.listMedia();
     if (mediaList.empty()) {
         cout << "Aucun média dans le catalogue." << endl;
         return;
@@ -127,3 +127,24 @@ void CatalogControleur::listMedia() {
     }
 }
 
+bool CatalogControleur::borrowMedia(IMedia* media) {
+    try {
+        _catalogManagement.borrowMedia(media);
+        cout << "Média emprunté avec succès : " << media->getTitle() << endl;
+        return true;
+    } catch (const std::exception& e) {
+        cerr << "Erreur lors de l'emprunt : " << e.what() << endl;
+        return false;
+    }
+}
+
+bool CatalogControleur::returnMedia(IMedia* media) {
+    try {
+        _catalogManagement.returnMedia(media);
+        cout << "Média retourné avec succès : " << media->getTitle() << endl;
+        return true;
+    } catch (const std::exception& e) {
+        cerr << "Erreur lors du retour : " << e.what() << endl;
+        return false;
+    }
+}
