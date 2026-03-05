@@ -39,3 +39,9 @@ bool Dvd::isBorrowed() const {
     return _isBorrowed;
 }
 
+std::chrono::system_clock::time_point Dvd::getBorrowDate() const {
+    if(_isBorrowed) {
+        return _borrowDate;
+    } 
+    return std::chrono::system_clock::time_point(); 
+}

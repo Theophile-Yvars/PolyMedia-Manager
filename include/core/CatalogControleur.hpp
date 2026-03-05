@@ -18,5 +18,6 @@ public:
     void initMedia();
 private:
     CatalogManagement _catalogManagement;
-    std::string formatTimePoint(std::chrono::system_clock::time_point tp);
+    std::string _formatTimePoint(std::chrono::system_clock::time_point tp);
+    void _printBasicMediaLine(const IMedia* media, bool includePrice);
 };

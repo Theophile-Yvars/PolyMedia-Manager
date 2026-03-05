@@ -64,15 +64,7 @@ IMedia* findMediaByTitle(const vector<IMedia*>& mediaList, const string& title) 
     }
     return nullptr;
 }
-
-void printBasicMediaLine(const IMedia* media, bool includePrice) {
-    cout << "- " << media->getTitle() << endl;
-    cout << "  Genre: " << genreToString(media->getGenre()) << endl;
-    if (includePrice) {
-        cout << "  Price: $" << media->getPrice() << endl;
-    }
-}
-} // namespace
+}// namespace
 
 CatalogControleur::CatalogControleur() {
     // Constructeur
@@ -115,7 +107,7 @@ bool CatalogControleur::removeMedia() {
 
     cout << "Médias disponibles:" << endl;
     for (const auto& media : mediaList) {
-        printBasicMediaLine(media, false);
+        _printBasicMediaLine(media, false);
     }
 
     cout << "Entrez le titre du média à supprimer: ";
@@ -156,7 +148,7 @@ bool CatalogControleur::borrowMedia() {
     auto mediaList = _catalogManagement.listMedia();
     cout << "Médias disponibles pour emprunt:" << endl;
     for (const auto& media : mediaList) {
-        printBasicMediaLine(media, true);
+        _printBasicMediaLine(media, true);
     }
 
     cout << "Entrez le titre du média à emprunter: ";
@@ -185,7 +177,7 @@ bool CatalogControleur::returnMedia() {
     for (const auto& media : mediaList) {
         if (auto* borrowable = dynamic_cast<IBorrowable*>(media)) {
             if (borrowable->isBorrowed()) {
-                printBasicMediaLine(media, true);
+                _printBasicMediaLine(media, true);
             }
         }
     }
@@ -201,11 +193,22 @@ bool CatalogControleur::returnMedia() {
     }
 
     try {
-        _catalogManagement.returnMedia(move(media));
-        cout << "Média retourné avec succès : " << media->getTitle() << endl;
+        auto* borrowable = dynamic_cast<IBorrowable*>(media);
+        
+        if (borrowable && borrowable->isBorrowed()) {
+
+            float penalty = _catalogManagement.returnMedia(media);
+             if (penalty > 0.0f) {
+                cout << "Pénalité de retour tardif : " << penalty << "€" << endl;
+            } else {
+                cout << "Média retourné à temps, aucune pénalité." << endl;
+            }
+            cout << "Média retourné avec succès : " << media->getTitle() << endl;
+
+        }
         return true;
     } catch (const std::exception& e) {
-        cerr << "Erreur lors du retour : " << e.what() << endl;
+        cerr << "Erreur : " << e.what() << endl;
         return false;
     }
 }
@@ -235,10 +238,25 @@ void CatalogControleur::initMedia() {
     _catalogManagement.addMedia(make_unique<Magazines>("New Scientist", Genre::Documentary, 7.20f));
 }
 
-std::string CatalogControleur::formatTimePoint(std::chrono::system_clock::time_point tp) {
+std::string CatalogControleur::_formatTimePoint(std::chrono::system_clock::time_point tp) {
     std::time_t tt = std::chrono::system_clock::to_time_t(tp);
     std::tm* local_tm = std::localtime(&tt);
     std::stringstream ss;
     ss << std::put_time(local_tm, "%d/%m/%Y %H:%M:%S");
     return ss.str();
 }
+
+void CatalogControleur::_printBasicMediaLine(const IMedia* media, bool includePrice) {
+    cout << "- " << media->getTitle() << endl;
+    cout << "  Genre: " << genreToString(media->getGenre()) << endl;
+    if (includePrice) {
+        cout << "  Price: $" << media->getPrice() << endl;
+    }
+    cout << "  Status: ";
+    if (auto* borrowable = dynamic_cast<const IBorrowable*>(media)) {
+        cout << _formatTimePoint(borrowable->getBorrowDate()) << " (Borrowed: " << (borrowable->isBorrowed() ? "Yes" : "No") << ")" << endl;
+    } else {
+        cout << "Not borrowable" << endl;
+    }
+
+} 

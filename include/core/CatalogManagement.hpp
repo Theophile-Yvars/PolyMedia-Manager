@@ -11,7 +11,7 @@ public:
     void removeMedia(IMedia* media);  
     std::vector<IMedia*> listMedia() const;
     bool borrowMedia(IMedia* media);
-    bool returnMedia(IMedia* media);
+    float returnMedia(IMedia* media);
 private:
     std::vector<std::unique_ptr<IMedia>> _mediaList;
 };

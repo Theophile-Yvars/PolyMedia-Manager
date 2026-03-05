@@ -9,6 +9,7 @@ add_executable(runTests
     test_book.cpp
     test_dvd.cpp
     test_magazine.cpp
+    test_catalogManagement.cpp
 )
 
 # Inclure les headers du projet

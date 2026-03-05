@@ -38,3 +38,11 @@ void Book::returnItem() {
 bool Book::isBorrowed() const {
     return _isBorrowed;
 }
+
+std::chrono::system_clock::time_point Book::getBorrowDate() const {
+    if(_isBorrowed) {
+        return _borrowDate;
+    } 
+    return std::chrono::system_clock::time_point(); 
+}
+
