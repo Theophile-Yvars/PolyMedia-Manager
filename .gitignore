@@ -1,0 +1,48 @@
+# --- Compilateurs et Binaires ---
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.a
+*.lib
+*.so
+*.dylib
+
+# --- Dossiers de Build (le plus important) ---
+# On ignore tout le dossier build où CMake travaille
+build/
+bin/
+lib/
+
+# --- IDEs et Editeurs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.vs/
+*.user
+*.suo
+*.sln
+*.vcxproj
+
+# --- CMake ---
+# Si tu lances cmake en dehors du dossier build (à éviter)
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+
+# --- Tests et Couverture (GTest / Lcov) ---
+*.gcno
+*.gcda
+*.gcov
+coverage/
+coverage.info
+
+# --- Divers ---
+.DS_Store
+Thumbs.db
+*.log
